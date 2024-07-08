@@ -11,8 +11,8 @@ app.use("/cursos", cursosRouter);
 app.use("/resenas", reseñasRouter);
 app.use("/auth", authRouter);
 
-app.listen(3000, () => {
-  console.log("Hey");
-});
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
+app.listen(3000, () => console.log("Server ready on port 3000."));
 
 export default app;
