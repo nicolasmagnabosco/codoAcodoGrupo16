@@ -6,12 +6,6 @@ import authRouter from "./routes/auth.router.js";
 dotenv.config();
 export const app = express();
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send("Something broke!");
-});
-
 app.use(express.json());
 app.use("/cursos", cursosRouter);
 app.use("/resenas", reseñasRouter);
