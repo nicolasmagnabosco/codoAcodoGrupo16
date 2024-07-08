@@ -1,8 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
-import cursosRouter from "./routes/cursos.router.js";
-import reseñasRouter from "./routes/reseñas.router.js";
-import authRouter from "./routes/auth.router.js";
+import cursosRouter from "./api/routes/cursos.router.js";
+import reseñasRouter from "./api/routes/reseñas.router.js";
+import authRouter from "./api/routes/auth.router.js";
 dotenv.config();
 export const app = express();
 
