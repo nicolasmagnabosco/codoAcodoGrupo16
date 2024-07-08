@@ -16,6 +16,3 @@ app.use(express.json());
 app.use("/cursos", cursosRouter);
 app.use("/resenas", reseñasRouter);
 app.use("/auth", authRouter);
-app.listen(PORT, () => {
-  console.log(`running at http://localhost:${PORT}`);
-});
