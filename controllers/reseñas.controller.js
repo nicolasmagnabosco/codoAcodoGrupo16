@@ -61,7 +61,7 @@ const edit = (req, res) => {
     (err, rows) => {
       if (err)
         res.status(500).json({ error: "Failed to connect to the database" });
-      else if (!rows[0])
+      else if (!rows || rows.affectedRows === 0)
         res.status(401).json({ error: "Esta reseña está restringida" });
       else res.status(202).json({ result: true });
     }

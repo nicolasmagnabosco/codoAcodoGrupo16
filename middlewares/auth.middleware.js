@@ -8,8 +8,10 @@ const validateToken = (req, res, next) => {
     const token = authHeader.split(" ")[1];
     jwt.verify(token, process.env.SECRET_KEY, (error, decode) => {
       if (error) res.status(401).json({ error: "Token invalido" });
-      else req.userID = decode.id;
-      next();
+      else {
+        req.userID = decode.id;
+        next();
+      }
     });
   }
 };
