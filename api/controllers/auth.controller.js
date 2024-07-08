@@ -1,6 +1,6 @@
 import db from "../db/db.js";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 const register = (req, res) => {
   const { email, password } = req.body;
